@@ -1,0 +1,24 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "sourceMap": false,
+        "outDir": "./dist/out-tsc",
+        "rootDir": ".",
+        "target": "es5",   
+        "lib": [
+        "es2015"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    /**
+    * We need to include @types so that typescript will identify the jasmine key words
+    * otherwise you will see compile errors while using describe or async etc methods.
+    */
+    "include": [
+        "e2e/**/*.ts",
+        "node_modules/@types"
+    ]
+    
+}
